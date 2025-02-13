@@ -1,0 +1,36 @@
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--cream);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.history-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .progress-content {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .history-section {
+        padding: 1rem;
+    }
+} 

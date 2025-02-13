@@ -1,0 +1,102 @@
+.App {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--cream);
+    overflow-x: hidden;
+}
+
+.main-content {
+    padding: 60px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu Button */
+.menu-button {
+    position: fixed;
+    top: 45px;
+    left: 20px;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    color: var(--cream);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.menu-button .material-icons-round {
+    font-size: 24px;
+}
+
+/* Ticker */
+.ticker-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 1px solid #1a1a1a;
+    z-index: 996; /* Below menu button */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    height: 35px;
+    padding: 0 10px;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-item:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.ticker-value {
+    color: #fff;
+}
+
+.ticker-change {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 50px 15px 15px;
+    }
+    
+    .menu-button {
+        top: 40px;
+        left: 15px;
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} 
